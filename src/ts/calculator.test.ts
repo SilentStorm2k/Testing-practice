@@ -40,4 +40,8 @@ describe('Calculator test', () => {
     test('division of 5 by 10 gives 0.5', () => {
         expect(calculator.divide(5, 10)).toBeCloseTo(0.5);
     });
+
+    test('division by 0', () => {
+        expect(() => calculator.divide(10, 0)).toThrow();
+    });
 });
